@@ -1,8 +1,8 @@
 import { forwardRef, useId, useMemo } from "react"
-import { Particle } from "../Particle/Particle"
-import { DefaultHeartIcon } from "./DefaultHeartIcon"
-import type { LikeButtonProps } from "./types"
-import { LIKE_BUTTON_DEFAULTS, useLikeButton } from "./useLikeButton"
+import { Particle } from "../Particle/Particle.js"
+import { DefaultHeartIcon } from "./DefaultHeartIcon.js"
+import type { LikeButtonProps } from "./types.js"
+import { LIKE_BUTTON_DEFAULTS, useLikeButton } from "./useLikeButton.js"
 import {
   computeButtonStyles,
   computeHoverActiveVars,
@@ -14,7 +14,7 @@ import {
   MAX_FILL_HEIGHT,
   WAVE_BACK_DURATION_S,
   WAVE_FRONT_DURATION_S,
-} from "./utils"
+} from "./utils.js"
 
 export type { LikeButtonProps }
 

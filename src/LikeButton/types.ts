@@ -1,4 +1,4 @@
-import type { UseLikeButtonOptions } from "./useLikeButton"
+import type { UseLikeButtonOptions } from "./useLikeButton.js"
 
 /** Props passed to custom icon render function */
 export interface IconRenderProps {

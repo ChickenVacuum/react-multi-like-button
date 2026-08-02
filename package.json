@@ -1,21 +1,31 @@
 {
   "name": "@fmarlats/react-like-button",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Animated React like button component with configurable multi clicks to fill the button, particle animations on click, all customizable. Supports Tailwind CSS and vanilla CSS. TypeScript-ready and accessible.",
   "type": "module",
-  "main": "./dist/index.cjs",
+  "main": "./dist/cjs/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
     },
     "./vanilla": {
-      "types": "./dist/vanilla.d.ts",
-      "import": "./dist/vanilla.js",
-      "require": "./dist/vanilla.cjs"
+      "import": {
+        "types": "./dist/vanilla.d.ts",
+        "default": "./dist/vanilla.js"
+      },
+      "require": {
+        "types": "./dist/cjs/vanilla.d.ts",
+        "default": "./dist/cjs/vanilla.js"
+      }
     },
     "./styles.css": "./dist/styles.css",
     "./like-button.css": "./dist/like-button.css"
@@ -27,8 +37,8 @@
     "*.css"
   ],
   "scripts": {
-    "build": "tsup && node scripts/build-css.js",
-    "dev": "tsup --watch",
+    "build": "node esbuild.config.mjs && tsc -p tsconfig.build.json && tsc -p tsconfig.build.cjs.json && node scripts/build-css.js",
+    "dev": "concurrently --kill-others --names bundles,types-esm,types-cjs \"node esbuild.config.mjs --watch\" \"tsc -p tsconfig.build.json --watch --preserveWatchOutput\" \"tsc -p tsconfig.build.cjs.json --watch --preserveWatchOutput\"",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
@@ -49,11 +59,12 @@
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^6.0.5",
     "@vitest/coverage-v8": "^4.1.10",
+    "concurrently": "^10.0.4",
+    "esbuild": "^0.28.1",
     "jsdom": "^30.0.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "tsup": "^8.5.1",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "vite": "^8.2.0",
     "vitest": "^4.1.10"
   },

@@ -1,4 +1,4 @@
-import type { ParticleConfig, ParticlePreset, ParticlePresetConfig } from "./types"
+import type { ParticleConfig, ParticlePreset, ParticlePresetConfig } from "./types.js"
 
 /**
  * Default particle configuration.

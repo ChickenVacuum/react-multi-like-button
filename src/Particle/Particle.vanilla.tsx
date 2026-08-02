@@ -1,6 +1,6 @@
-import { getParticleShape } from "./shapes"
-import type { ParticleProps } from "./useParticle"
-import { useParticle } from "./useParticle"
+import { getParticleShape } from "./shapes/index.js"
+import type { ParticleProps } from "./useParticle.js"
+import { useParticle } from "./useParticle.js"
 
 /**
  * Particle - Animated particle for burst effects.

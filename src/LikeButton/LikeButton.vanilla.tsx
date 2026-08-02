@@ -1,8 +1,8 @@
 import { forwardRef, useId, useMemo } from "react"
-import { ParticleVanilla } from "../Particle/Particle.vanilla"
-import { DefaultHeartIcon } from "./DefaultHeartIcon"
-import type { IconRenderProps, LikeButtonVanillaProps } from "./types"
-import { LIKE_BUTTON_DEFAULTS, useLikeButton } from "./useLikeButton"
+import { ParticleVanilla } from "../Particle/Particle.vanilla.js"
+import { DefaultHeartIcon } from "./DefaultHeartIcon.js"
+import type { IconRenderProps, LikeButtonVanillaProps } from "./types.js"
+import { LIKE_BUTTON_DEFAULTS, useLikeButton } from "./useLikeButton.js"
 import {
   computeButtonStyles,
   computeHoverActiveVars,
@@ -12,7 +12,7 @@ import {
   getShapeStyles,
   ICON_SIZE_RATIO,
   MAX_FILL_HEIGHT,
-} from "./utils"
+} from "./utils.js"
 
 export type { LikeButtonVanillaProps }
 

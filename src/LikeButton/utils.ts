@@ -1,4 +1,4 @@
-import type { Cursor, CursorPreset, Shape, StyleOverrides } from "./types"
+import type { Cursor, CursorPreset, Shape, StyleOverrides } from "./types.js"
 
 // ============================================
 // Layout & Animation Constants

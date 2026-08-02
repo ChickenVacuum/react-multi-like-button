@@ -1,4 +1,4 @@
-import type { ParticleShapeProps } from "../types"
+import type { ParticleShapeProps } from "../types.js"
 
 /**
  * Circle-shaped particle component.

@@ -8,23 +8,23 @@
 // ============================================================================
 
 // Default icon (can be used as reference for custom icons)
-export { DefaultHeartIcon } from "./LikeButton/DefaultHeartIcon"
+export { DefaultHeartIcon } from "./LikeButton/DefaultHeartIcon.js"
 // Tailwind version (default)
-export { LikeButton, LikeButton as default } from "./LikeButton/LikeButton"
+export { LikeButton, LikeButton as default } from "./LikeButton/LikeButton.js"
 // Vanilla CSS version (also available from ./vanilla entry)
-export { LikeButtonVanilla } from "./LikeButton/LikeButton.vanilla"
+export { LikeButtonVanilla } from "./LikeButton/LikeButton.vanilla.js"
 
 // ============================================================================
 // HEADLESS HOOK
 // ============================================================================
 
-export { LIKE_BUTTON_DEFAULTS, useLikeButton } from "./LikeButton/useLikeButton"
+export { LIKE_BUTTON_DEFAULTS, useLikeButton } from "./LikeButton/useLikeButton.js"
 
 // ============================================================================
 // PARTICLE PRESETS
 // ============================================================================
 
-export { PARTICLE_PRESETS } from "./Particle/presets"
+export { PARTICLE_PRESETS } from "./Particle/presets.js"
 
 // ============================================================================
 // TYPES
@@ -43,7 +43,7 @@ export type {
   Shape,
   ShapePreset,
   StyleOverrides,
-} from "./LikeButton/types"
+} from "./LikeButton/types.js"
 
 // Headless hook types
 export type {
@@ -52,7 +52,7 @@ export type {
   ParticleData,
   UseLikeButtonOptions,
   UseLikeButtonReturn,
-} from "./LikeButton/useLikeButton"
+} from "./LikeButton/useLikeButton.js"
 
 // Particle configuration types
 export type {
@@ -63,4 +63,4 @@ export type {
   ParticleShapePreset,
   ParticleShapeProps,
   Range,
-} from "./Particle/types"
+} from "./Particle/types.js"

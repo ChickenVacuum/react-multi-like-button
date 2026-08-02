@@ -1,5 +1,5 @@
-import { DEFAULT_PARTICLE_CONFIG, getParticlePreset } from "./presets"
-import type { ParticleConfig, ParticlePreset, Range } from "./types"
+import { DEFAULT_PARTICLE_CONFIG, getParticlePreset } from "./presets.js"
+import type { ParticleConfig, ParticlePreset, Range } from "./types.js"
 
 /**
  * Normalize a number or range configuration to a Range object.

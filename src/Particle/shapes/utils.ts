@@ -1,9 +1,9 @@
-import type { ParticleShape, ParticleShapeProps } from "../types"
-import { CircleShape } from "./CircleShape"
-import { HeartShape } from "./HeartShape"
-import { SparkleShape } from "./SparkleShape"
-import { SquareShape } from "./SquareShape"
-import { StarShape } from "./StarShape"
+import type { ParticleShape, ParticleShapeProps } from "../types.js"
+import { CircleShape } from "./CircleShape.js"
+import { HeartShape } from "./HeartShape.js"
+import { SparkleShape } from "./SparkleShape.js"
+import { SquareShape } from "./SquareShape.js"
+import { StarShape } from "./StarShape.js"
 
 /**
  * Get the appropriate shape component based on shape configuration.

@@ -14,7 +14,7 @@
 // ============================================================================
 
 // Presets for particle effects
-export { PARTICLE_PRESETS } from "./presets"
+export { PARTICLE_PRESETS } from "./presets.js"
 
 // Type definitions for particle configuration
 export type {
@@ -25,18 +25,18 @@ export type {
   ParticleShapePreset,
   ParticleShapeProps,
   Range,
-} from "./types"
+} from "./types.js"
 
 // ============================================================================
 // INTERNAL API (used within the library, not re-exported)
 // ============================================================================
 
 // Internal components
-export { Particle, Particle as default } from "./Particle"
-export { ParticleVanilla } from "./Particle.vanilla"
+export { Particle, Particle as default } from "./Particle.js"
+export { ParticleVanilla } from "./Particle.vanilla.js"
 
 // Internal presets and configuration
-export { DEFAULT_PARTICLE_CONFIG, getParticlePreset } from "./presets"
+export { DEFAULT_PARTICLE_CONFIG, getParticlePreset } from "./presets.js"
 
 // Internal shape components
 export {
@@ -46,14 +46,14 @@ export {
   SparkleShape,
   SquareShape,
   StarShape,
-} from "./shapes"
+} from "./shapes/index.js"
 
 // Internal types
-export type { ParticlePresetConfig } from "./types"
-export type { ParticleProps, UseParticleReturn } from "./useParticle"
+export type { ParticlePresetConfig } from "./types.js"
+export type { ParticleProps, UseParticleReturn } from "./useParticle.js"
 
 // Internal hooks and utilities
-export { useParticle } from "./useParticle"
+export { useParticle } from "./useParticle.js"
 export {
   mergeParticleConfig,
   normalizeAngle,
@@ -61,4 +61,4 @@ export {
   randomAngle,
   randomInRange,
   resolveParticleConfig,
-} from "./utils"
+} from "./utils.js"

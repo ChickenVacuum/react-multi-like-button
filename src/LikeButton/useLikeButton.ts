@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react"
-import type { ParticleConfig, ParticlePreset, ParticleShape } from "../Particle/types"
+import type { ParticleConfig, ParticlePreset, ParticleShape } from "../Particle/types.js"
 import {
   normalizeRange,
   randomAngle,
   randomInRange,
   resolveParticleConfig,
-} from "../Particle/utils"
-import { PARTICLE_CLEANUP_BUFFER_MS } from "./utils"
+} from "../Particle/utils.js"
+import { PARTICLE_CLEANUP_BUFFER_MS } from "./utils.js"
 
 /** Data structure for a single particle effect */
 export interface ParticleData {

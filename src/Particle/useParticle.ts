@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import type { ParticleShape } from "./types"
+import type { ParticleShape } from "./types.js"
 
 /** Props for particle components */
 export interface ParticleProps {

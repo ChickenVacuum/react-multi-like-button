@@ -1,4 +1,4 @@
-import type { IconRenderProps } from "./types"
+import type { IconRenderProps } from "./types.js"
 
 /**
  * Default heart icon for LikeButton.
