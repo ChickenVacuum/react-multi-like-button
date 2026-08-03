@@ -39,7 +39,6 @@
   "scripts": {
     "build": "node esbuild.config.mjs && tsc -p tsconfig.build.json && tsc -p tsconfig.build.cjs.json && node scripts/build-css.js",
     "dev": "concurrently --kill-others --names bundles,types-esm,types-cjs \"node esbuild.config.mjs --watch\" \"tsc -p tsconfig.build.json --watch --preserveWatchOutput\" \"tsc -p tsconfig.build.cjs.json --watch --preserveWatchOutput\"",
-    "demo:hero": "vite docs/hero-demo --host 127.0.0.1",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
