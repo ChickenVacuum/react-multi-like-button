@@ -1,37 +1,40 @@
-# React Like Button
+<h1 align="center">React Like Button</h1>
 
-[![npm version](https://img.shields.io/npm/v/@fmarlats/react-like-button.svg)](https://www.npmjs.com/package/@fmarlats/react-like-button)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/@fmarlats/react-like-button)](https://bundlephobia.com/package/@fmarlats/react-like-button)
-[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<p align="center">
+  <strong>An animated reaction button for React.</strong><br />
+  Use one click or several to fill up the button, then customize the fill, particles, shape, icon, and cursor.
+</p>
 
-| Custom heart with on complete state | Classic button | Like shaped cursor | Gold stars particle |
-|--------|--------|--------|--------|
-| ![Full heart SVG](docs/header_demos/like_button_heart_svg.gif) | ![Round with sparks](docs/header_demos/like_button_round_sparks.gif) | ![Square with emeralds](docs/header_demos/like_button_square_emerald.gif) | ![Square with stars](docs/header_demos/like_button_square_star.gif) |
+<p align="center">
+  <a href="https://www.npmjs.com/package/@fmarlats/react-like-button"><img src="https://img.shields.io/npm/v/@fmarlats/react-like-button.svg" alt="npm version" /></a>
+  <a href="https://bundlephobia.com/package/@fmarlats/react-like-button"><img src="https://img.shields.io/bundlephobia/minzip/@fmarlats/react-like-button" alt="bundle size" /></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-Ready-blue.svg" alt="TypeScript ready" /></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT license" /></a>
+</p>
 
-| Dislike button round | Dislike button square |
-|--------|--------|
-| ![Dislike button round](docs/header_demos/dislike_button_round.gif) | ![Dislike button square](docs/header_demos/dislike_button_square.gif) |
+<p align="center">
+  <a href="https://stackblitz.com/edit/react-like-button-component?file=src%2FApp.tsx"><strong>Try the interactive playground →</strong></a>
+  ·
+  <a href="https://www.npmjs.com/package/@fmarlats/react-like-button">View on npm</a>
+</p>
 
-_(You can make any kind of reaction buttons really)_
+<p align="center">
+  <img src="docs/header_demos/hero.gif" width="960" alt="Basic heart, progressively happier mood, and rocket launch reaction buttons filling with animated particles" />
+</p>
 
-_(The gifs are accelerated and chopped, the effects would render better in real life)_
+<p align="center"><sub>The preview GIF is compressed so looks choppy. It will be fluid in real use.</sub></p>
 
-Test it yourself: [StackBlitz Playground](https://stackblitz.com/edit/react-like-button-component?file=src%2FApp.tsx)
+Use it for likes, dislikes, favorites, ratings, feedback, or your own reaction type. Both Tailwind CSS and vanilla CSS versions are included, with the same TypeScript API.
 
-An animated React like button component with configurable multi clicks to fill the button, particle animations on click, all customizable. Supports Tailwind CSS and vanilla CSS. TypeScript-ready and accessible.
+## What it supports
 
-## Features
-
-- 🎯 **Multi like Fill Animation** - You can click and like multiple times until full (configurable) 
-- ✨ **Particle Effects** - 5 built-in presets + full customization when you click
-- 🎭 **Custom Shapes** - Circle, rounded, or custom
-- 🖱️ **Custom Cursors** - Built-in presets (heart, star, thumbs-up) or custom
-- 🎨 **Fully Customizable** - Colors, sizes, styles, and more
-- 📦 **Two Versions** - Tailwind CSS or vanilla CSS
-- ♿ **Accessible** - ARIA labels and keyboard support
-- 📱 **Responsive** - Works on all screen sizes
-- 🔒 **TypeScript** - Full type safety
+- Single-click and multi-click reactions
+- Controlled and uncontrolled state
+- Animated fill with optional waves
+- Five built-in particle effects, each customizable
+- Custom button shapes, icons, cursors, colors, and borders
+- Keyboard controls and ARIA attributes
+- Tailwind CSS and vanilla CSS components
 
 ## Installation
 
@@ -98,7 +101,7 @@ function App() {
 
 ### Built-in Presets
 
-Choose from 5 designed particle effects:
+Five presets are included:
 
 ```tsx
 // Quick explosion of hearts (12 particles)
@@ -119,7 +122,7 @@ Choose from 5 designed particle effects:
 
 ### Custom Particle Configuration
 
-Or fully customize particle behavior:
+Override particle behavior with `particleConfig`:
 
 ```tsx
 <LikeButton particleConfig={{
@@ -138,7 +141,7 @@ Or fully customize particle behavior:
 
 ### Combine Preset with Custom Config
 
-Start with a preset and override specific properties:
+You can also start with a preset and override only what you need:
 
 ```tsx
 <LikeButton 
@@ -237,7 +240,7 @@ const [clicks, setClicks] = useState(0);
 
 ### Celebration Button
 
-Perfect for achievements and milestones:
+A larger confetti burst for achievements or milestones:
 
 ```tsx
 <LikeButton
@@ -254,7 +257,7 @@ Perfect for achievements and milestones:
 
 ### Upvote Button
 
-Reddit-style upvote with fountain effect:
+An upvote button with an upward fountain effect:
 
 ```tsx
 <LikeButton
@@ -270,7 +273,7 @@ Reddit-style upvote with fountain effect:
 
 ### Subtle Favorite
 
-Gentle effect for favorites:
+A smaller, slower effect for favorites:
 
 ```tsx
 <LikeButton
@@ -285,7 +288,7 @@ Gentle effect for favorites:
 
 ### Custom Shape Particles
 
-Create custom particle shapes:
+Particle shapes can be React render functions:
 
 ```tsx
 import type { CustomParticleShape } from '@fmarlats/react-like-button';
@@ -307,20 +310,23 @@ const customDiamond: CustomParticleShape = {
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `size` | `number` | `80` | Button size in pixels |
+| `size` | `number` | `96` | Button size in pixels |
 | `fillColor` | `string` | `"#EF4444"` | Fill color (hex or CSS color) |
-| `waveColor` | `string` | `fillColor` | Wave color (defaults to fillColor) |
-| `maxClicks` | `number` | `Infinity` | Maximum number of clicks allowed |
+| `waveColor` | `string` | `"#B91C1C"` | Back wave color |
+| `maxClicks` | `number` | `1` | Maximum number of clicks allowed |
 | `clicks` | `number` | - | Controlled mode: current click count |
 | `defaultClicks` | `number` | `0` | Initial clicks for uncontrolled mode |
+| `disabled` | `boolean` | At maximum | Override the automatic disabled state |
+| `ariaLabel` | `string \| (state) => string` | Generated | Static or state-based accessible label |
 | `onChange` | `(clicks: number) => void` | - | Called with new count (ideal for `setClicks`) |
 | `onClick` | `(clicks: number, event) => void` | - | Click handler with event access |
 | `onRightClick` | `(clicks: number, event) => void` | - | Right-click handler |
-| `shape` | `ShapePreset \| CustomShape` | `"heart"` | Button shape |
+| `className` | `string` | `""` | Additional button class name |
+| `shape` | `ShapePreset \| CustomShape` | `"circle"` | Button shape |
 | `cursor` | `CursorPreset \| CustomCursor` | `"heart"` | Cursor style |
-| `styles` | `StyleOverrides` | - | Custom style overrides |
-| `renderIcon` | `(props) => ReactNode` | - | Custom icon renderer |
-| `minFillPercent` | `number` | `5` | Minimum fill percentage |
+| `styles` | `StyleOverrides` | `{}` | Custom style overrides |
+| `renderIcon` | `((props) => ReactNode) \| null` | Heart icon | Custom icon renderer |
+| `minFillPercent` | `number` | `0` | Minimum fill percentage |
 | `showParticles` | `boolean` | `true` | Enable/disable particle effects |
 | `showWaves` | `boolean` | `true` | Enable/disable wave animation on fill |
 | `particlePreset` | `ParticlePreset` | - | Particle effect preset |
@@ -364,24 +370,13 @@ const customDiamond: CustomParticleShape = {
 
 Check out the [examples](./examples) directory for more usage examples.
 
-## Browser Support
+## Browser support
 
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+The component uses standard CSS transitions, transforms, and SVG. It is intended for current versions of Chrome, Edge, Firefox, Safari, iOS Safari, and Chrome for Android.
 
 ## Performance
 
-The particle system is optimized for performance:
-- Particles are removed from DOM after animation
-- CSS transforms for smooth 60fps animations
-- Configurable particle count for performance tuning
-
-**Recommendations:**
-- Use 5-20 particles for frequent interactions
-- Use 20-50 particles for special moments
-- Use 50+ particles sparingly (may impact performance on slower devices)
+Particle movement uses CSS transforms, and particles are removed from the DOM when their animation finishes. For buttons that are clicked often, keep `particleConfig.count` low.
 
 ## Accessibility
 
@@ -392,7 +387,7 @@ The particle system is optimized for performance:
 
 ## TypeScript
 
-Full TypeScript support with comprehensive type definitions:
+The package exports its component, hook, shape, cursor, and particle types:
 
 ```tsx
 // Most common types
@@ -422,48 +417,9 @@ import type {
 } from '@fmarlats/react-like-button';
 ```
 
-## Changelog
-
-### v0.9.3 (Breaking Change)
-
-**⚠️ Breaking Change: Renamed `localClicks` to `clicks`**
-
-The `localClicks` prop has been renamed to `clicks` for clarity:
-
-```tsx
-// Before
-<LikeButton localClicks={clicks} onClick={(n) => setClicks(n)} />
-
-// After
-<LikeButton clicks={clicks} onClick={(n) => setClicks(n)} />
-```
-
-This also affects the `useLikeButton` hook:
-- Option: `localClicks` → `clicks`
-- Return value: `localClicks` → `clicks`
-- `AriaLabelState.localClicks` → `AriaLabelState.clicks`
-
-### v0.9.0 (Breaking Change)
-
-**⚠️ Breaking Change for Tailwind Users**
-
-The Tailwind CSS version now requires importing a CSS file for animations and hover effects to work:
-
-```tsx
-import { LikeButton } from '@fmarlats/react-like-button';
-import '@fmarlats/react-like-button/like-button.css'; // NEW - Required
-```
-
-**What changed:**
-- Removed inline `<style>` tag injection for better performance and CSP compliance
-- Wave animations and hover/active states are now defined in an external CSS file
-- CSS custom properties are used for dynamic styling
-
-**Vanilla CSS users** are not affected - continue importing `@fmarlats/react-like-button/styles.css` as before.
-
 ## Contributing
 
-Contributions are welcome! Please open an issue or pull request on GitHub.
+Contributions are welcome. Open an issue or pull request on GitHub.
 
 ## License
 
@@ -475,8 +431,6 @@ Created by [Florian MARLATS](https://github.com/fmarlats)
 
 ## Support
 
-- 🐛 [Report a bug](https://github.com/fmarlats/react-like-button/issues)
-- 💡 [Request a feature](https://github.com/fmarlats/react-like-button/issues)
-- ⭐ [Star on GitHub](https://github.com/fmarlats/react-like-button)
-
-
+- [Report a bug](https://github.com/fmarlats/react-like-button/issues)
+- [Request a feature](https://github.com/fmarlats/react-like-button/issues)
+- [Star the repository](https://github.com/fmarlats/react-like-button)

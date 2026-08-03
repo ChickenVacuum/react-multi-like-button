@@ -27,7 +27,7 @@ const FILL_CONTAINER_CLASSES =
 const WAVE_CONTAINER_CLASSES = "absolute bottom-full left-0 w-[200%] h-4 flex"
 const WAVE_SVG_CLASSES = "w-1/2 h-full fill-current"
 const PARTICLE_CONTAINER_CLASSES =
-  "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+  "absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
 
 /**
  * LikeButton - Animated like button with liquid fill and particle effects.

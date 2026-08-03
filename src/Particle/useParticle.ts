@@ -58,26 +58,20 @@ export function useParticle({
 >): UseParticleReturn {
   const [isAnimating, setIsAnimating] = useState(false)
 
-  // Trigger animation after browser has painted the initial state
-  // Using double RAF ensures the initial state is committed before transitioning
+  // Trigger animation on the next frame so the origin is visible immediately
+  // while still allowing the browser to transition to the final state.
   useEffect(() => {
     let cancelled = false
-    let raf2: number | undefined
 
-    // First RAF: scheduled during current frame
-    const raf1 = requestAnimationFrame(() => {
-      // Second RAF: runs after browser has painted
-      raf2 = requestAnimationFrame(() => {
-        if (!cancelled) {
-          setIsAnimating(true)
-        }
-      })
+    const raf = requestAnimationFrame(() => {
+      if (!cancelled) {
+        setIsAnimating(true)
+      }
     })
 
     return () => {
       cancelled = true
-      cancelAnimationFrame(raf1)
-      if (raf2 !== undefined) cancelAnimationFrame(raf2)
+      cancelAnimationFrame(raf)
     }
   }, [])
 
